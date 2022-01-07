@@ -1,0 +1,270 @@
+/* Helpers */
+.flex{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.center{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.column{
+    flex-direction: column;
+}
+.row{
+    flex-direction: row;
+}
+.ta-right{
+    text-align: right;
+    margin-right: 10% !important;
+}
+.ta-center{
+    text-align: center;
+}
+.ta-left{
+    text-align: left;
+    margin-left: 10% !important;
+}
+.justify-spread{
+    justify-content:space-between;
+}
+.h-50{
+    min-height: 50vh;
+}
+
+/* Page Loader */
+#loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0b0b0b;
+    display: grid;
+    place-items: center;
+}
+
+.loader {
+    animation: spin 1s linear infinite;
+}
+
+.loader img{
+    height: 10em;
+    width: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotateZ(0deg); }
+    100% { transform: rotateZ(-360deg); }
+}
+
+/*Connect Birdie*/
+.connect-floater{
+    overflow: hidden;
+    height: auto;
+}
+.melty {
+    z-index: 10;
+    position: fixed;
+    top: 5em;
+    right: -12em;
+    transition: padding 0.3s;
+}
+.melty img {
+    z-index: 10;
+    width: 25em;
+    transform: rotateZ(-30deg);
+}
+.speech-bubble {
+    position: fixed;
+    top: 2em;
+    right: 10em;
+    margin: .5em auto;
+    padding: .75em;
+    width: 10em; height: 4em;
+    border-radius: .25em;
+    background: limegreen;
+    text-align: center;
+    animation-delay: 6s;
+    transition: padding 0.3s;
+}
+.speech-bubble:before, .speech-bubble:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+}
+.speech-bubble:after {
+    top: 0; right: 0; bottom: 0; left: 0;
+    border-radius: inherit;
+    transform: rotate(2deg) translate(.35em, -.15em) scale(1.02) !important;
+    background:whitesmoke;
+}
+.speech-bubble:before {
+    border: solid 0 transparent;
+    border-right: solid 3.5em whitesmoke;
+    border-bottom: solid .25em limegreen;
+    bottom: .25em; left: 1.25em;
+    width: 0; height: 1em;
+    transform: rotate(45deg) skewX(75deg)!important;
+}
+.speech-bubble p{
+    padding-top: .75em;
+    transform: rotate(2deg) translate(.35em, -.15em) scale(1.02);
+}
+.fade-in{
+    animation: fadein 2000ms !important;
+    -webkit-animation: fadein 2000ms !important;
+    opacity: 1 !important;
+}
+.fade-out{
+    animation: fadeout 2000ms !important;
+    -webkit-animation: fadeout 2000ms !important;
+    opacity: 0.15 !important;
+}
+@keyframes fadein{
+    0% { opacity:0.15; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes fadein{
+    0% { opacity:0.15; }
+    100% { opacity:1; }
+}
+@keyframes fadeout{
+    0% { opacity:1; }
+    100% { opacity:0.15; }
+}
+@-webkit-keyframes fadeout{
+    0% { opacity:1; }
+    100% { opacity:0.15; }
+}
+
+/* General CSS */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #033047;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #06c3d3;
+  }
+body{
+    margin:0;
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    color: #033047;
+}
+a{
+    text-decoration: none;
+}
+p, h1, h2, h3, h4, h5{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+h4, h3 b, h5 b, .fab{
+    color:#06c3d3;
+}
+h3{
+    margin-bottom: 7.5px;
+}
+h4{
+    margin-bottom: 1em;
+}
+h5{
+    margin-bottom: 20px;
+}
+hr{
+    text-align: center;
+    width: 75%;
+    border: 3px solid #06c3d3;
+    border-radius: 3px;
+    background-color: #06c3d3;
+}
+.fab{
+    margin-right: .75em;
+}
+.fab:hover{
+    color: #033047;
+    transform: scale(1.3);
+    transition: 500ms;
+}
+.row1 {
+  background-image: url(asset//12304.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+  height: 100vh;
+  color: #06c3d3;
+  flex-direction: column;
+}
+.innerContainer{
+    margin-top: -25vh;
+    width: 80%;
+    font-family: 'Space Mono', monospace;
+}
+.innerContainer h1{
+    font-size: 5rem;
+}
+.innerContainer h2{
+    font-size: 2rem;
+}
+.row2, .row3, .row4, .row5, .row6, .row7, .row8 {
+    background-image: url(asset/Winnebago_Topo_Pattern_Path_Gray.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+.center-compress{
+    max-width: 950px;
+}
+.paragraph{
+    width: 50%;
+    margin: 5em;
+}
+.paragraph h2{
+    font-size: 5rem;
+}
+.paragraph h4{
+    font-size: 2rem;
+}
+.image-row img{
+    max-height: 100px;
+    margin: 1em;
+}
+.sim-button{
+	line-height: 50px;
+	height: 50px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 10em;
+	cursor: pointer;
+}
+.button1 {
+	color: #033047;
+    font-size: 14px;
+    background-color: transparent;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	position: relative;
+	border: 1px solid #033047;
+}
+.button1 a{
+	color: #033047;
+	display: block;
+}
+.button1:hover {
+	background-color: #06c3d3;
+    border: 1px solid #06c3d3;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;	
+    -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}

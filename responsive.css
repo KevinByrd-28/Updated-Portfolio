@@ -1,0 +1,112 @@
+@media only screen and (max-width: 1220px){
+    .row2{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .row2 .paragraph{
+        min-height: unset;
+        margin: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .melty {
+        top: 5em;
+        right: -5em;
+    }
+    .melty img {
+        width: 10em;
+    }
+    .speech-bubble {
+        width: 5em; height: 2.5em;
+        top: 1em;
+        right: 6.5em;
+        
+    }
+    .speech-bubble:before, .speech-bubble:after {
+        position: absolute;
+        z-index: -1;
+        content: '';
+    }
+    .speech-bubble:after {
+        top: 0; right: 0; bottom: 0; left: 0;
+        border-radius: inherit;
+        transform: rotate(2deg) translate(.35em, -.15em) scale(1.02) !important;
+        background:whitesmoke;
+    }
+    .speech-bubble:before {
+        border: solid 0 transparent;
+        border-right: solid 3.5em whitesmoke;
+        border-bottom: solid .25em limegreen;
+        bottom: .25em; left: 1.25em;
+        width: 0; height: 1em;
+        transform: rotate(45deg) skewX(75deg)!important;
+    }
+    .speech-bubble p{
+        font-size: 12px;
+        padding: 0;
+        margin-top: -5px;
+        transform: rotate(2deg) translate(.35em, -.15em) scale(.9);
+    }
+    .row4{
+        flex-wrap: wrap;
+    }
+    .row4 .paragraph{
+        min-height: unset;
+        text-align: center;
+        margin: 2.5em;
+    }
+    .ta-left{
+        margin-left: 2.5em !important;
+    }
+    .ta-right{
+        margin-right: 2.5em !important;
+    }
+    .social-icons{
+        display: none;
+    }
+    .resume{
+        margin-top:-1.5em !important;
+    }
+}
+
+@media only screen and (max-width: 525px){
+    .innerContainer h1{
+        font-size: 3rem;
+    }
+    .innerContainer h2{
+        font-size: 1rem;
+    }
+    .image-row img{
+        max-height: 75px;
+        margin: 1em;
+    }
+}
+
+@media only screen and (max-width: 405px){
+    .row2 h2{
+        font-size: 3rem;
+    }
+    .row6 h2, .row8 h2{
+        font-size: 3rem;
+    }
+    .row6 h4, .row8 h4{
+        font-size: 1rem;
+    }
+    .image-row img{
+        max-height: 50px;
+        margin: 1em;
+    }
+}
+
+@media only screen and (max-width: 305px){
+    .image-row img{
+        max-height: 40px;
+        margin: 1em;
+    }
+    .row4 h4{
+        white-space: nowrap;
+    }
+}

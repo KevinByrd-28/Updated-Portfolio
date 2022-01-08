@@ -83,17 +83,17 @@
         max-height: 75px;
         margin: 1em;
     }
-}
-
-@media only screen and (max-width: 405px){
-    .row2 h2{
-        font-size: 3rem;
-    }
     .row6 h2, .row8 h2{
         font-size: 3rem;
     }
     .row6 h4, .row8 h4{
         font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 405px){
+    .row2 h2{
+        font-size: 3rem;
     }
     .image-row img{
         max-height: 50px;

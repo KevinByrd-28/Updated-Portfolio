@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Kevin Byrd's Portfolio</title>
-    <link rel="stylesheet" href="bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-  
-    <script type="text/javascript" src="js/contact.js"></script>
+
     <script type="php" src="saveContact.php"></script>
     <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js?ver=1.4.2'></script>
   
@@ -21,7 +19,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
 
     <!-- Fonts -->
@@ -34,6 +31,12 @@
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="200">
     <meta property="og:image:height" content="200">
+
+    <!-- React -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    
   </head>
 
 <body>
@@ -49,7 +52,7 @@
     <div class='speech-bubble animate__animated animate__bounceIn'><p>Click me to connect on LinkedIn!</p>
     </div>
 
-    <a href="https://www.linkedin.com/in/kevinbyrd123/" class="melty animate__animated animate__rotateInDownRight animate__delay-5s" target="_blank"><img src="asset/melty.png"></div>
+    <a href="https://www.linkedin.com/in/kevinbyrd123/" class="melty animate__animated animate__rotateInDownRight animate__delay-3s" target="_blank"><img src="asset/melty.png"></div>
     </a>
   </div>
 
@@ -62,7 +65,7 @@
     </div>
     <div class="row2 flex row">
       <div class="paragraph h-50 flex center">
-        <h2 class="ta-center">A creative .NET developer</h2>
+        <h2 class="ta-center">A creative .NET developer.</h2>
       </div>
       <div class="paragraph h-50 flex center column">
         <div class="image-row flex center justify-spread row">
@@ -117,9 +120,8 @@
     </div>
     <div class="row6 flex center row">
       <div class="paragraph center column ta-center">
-        <h2>Past Projects</h2>
-        <h4>Coming Soon</h4>
-        <!-- React Card Slider To Go Here-->
+        <h2>Past project samples.</h2>
+        <div id="app"></div>
       </div>
     </div>
     <div class="row7 flex column">
@@ -127,7 +129,7 @@
     </div>
     <div class="row8 flex center column">
       <div data-aos="fade-up" data-aos-delay="300" class="paragraph center column ta-center">
-        <h2>Get In Touch</h2>
+        <h2>Get in touch.</h2>
         <h4>I'm not currently looking for any new opportunities, but my inbox is always open. Whether you have a question or just want to chat, I'll do my best to get back to you!</h4>
         <a href="mailto: kevin.byrd@hotmail.com">
           <div class="button sim-button button1">
@@ -138,13 +140,150 @@
     </div>
 </body>
 
-<!--Annimate On Scroll-->
-<script>AOS.init();</script>
-<!-- React -->
-<script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-<!-- React Components -->
-<script src="card-carousel.js"></script>
+<!-- React Carousel -->
+<script type="text/babel">
+let imageArray = [
+    {
+      image: 'asset/meltyCard.png',
+      title:'Melty',
+      text: 'Cartoon Creature',
+      text2: 'Built With CSS Only',
+      link: 'https://codepen.io/KevinByrd-28/pen/dyYRXzo'
+    },
+    {
+      image:'asset/meemme.PNG',
+      title:'MeemMe',
+      text: 'Meme Generator',
+      text2: 'MVC Framework & Azure',
+      link: 'https://kevinbyrd-28.github.io/MeemME/'
+    },
+     {
+      image:'asset/fortis1.PNG',
+      title:'Client Website',
+      text: 'HTML, CSS, JS',
+      text2: '',
+      link: 'https://pandiontactical.com/'
+    } ,
+    {
+      image:'asset/springtree1.PNG',
+      title:'Client Website',
+      text: 'Utilizing Editor X CMS',
+      text2: '',
+      link: 'https://www.springtreelandscapes.com/'
+    }
+  ]
+  class Container extends React.Component{
+    renderChildrenView = (item ,index) =>{
+      return (
+        <a href={item.link} target="_blank">
+        <div className='contentBox flex center' key={index}>
+          <div className='cardBox'>
+            <div 
+              style={{backgroundImage:`url(${item.image})`}} 
+              className="imageStyle"/> 
+            <div className='fontBox ta-left'>
+              <p className='titleStyle'>{item.title}</p>
+              <br/>
+              <p>{item.text}</p>
+              <p>{item.text2}</p>
+            </div>
+  
+          </div> 
+       </div>
+       </a>
+      )
+    }
+    render(){
+      return(
+        <React.Fragment>
+           <Carousel 
+            dataArray = {imageArray }
+            autoplay={true}
+            delay={10}
+            carouselPostWidth={'400px'} 
+            carouselPostHeight={150}
+            carouselPostMargin={10}>
+            {this.renderChildrenView}
+            
+           
+            </Carousel>
+        </React.Fragment>
+      )
+    }
+  }
+  
+  class Carousel extends React.Component{
+    state = {
+      nowIndex:0,
+    }
+    componentDidMount(){
+      if(this.props.autoplay){
+        // this.autoPlay()
+      }
+    }
+    componentWillUnmount(){
+      clearInterval(this.timer)
+    }
+    autoPlay = () =>{
+      this.timer = setInterval(()=>{
+            this.changeImagePosition(2)
+       },this.props.delay*1000);
+    }
+  
+    conputedLeft = () =>{
+      const {carouselPostWidth,carouselPostHeight,carouselPostMargin} = this.props
+      const {nowIndex} = this.state
+      console.log('nowIndex',nowIndex)
+      let leftSpan = parseInt(`${-nowIndex * parseInt(carouselPostWidth)}`)
+      return{
+        left: carouselPostWidth.toString().match(/[%vw]/) != null ? 
+        `calc(${leftSpan}% - ${carouselPostMargin*2*nowIndex}px)`: 
+        `${leftSpan - (carouselPostMargin*2*nowIndex)}px`
+      }
+    }
+    
+    changeImagePosition = (index) =>{
+       const {dataArray , block} = this.props
+       const {nowIndex} = this.state
+       // (1 + 1 + 3) % 3
+       this.setState({
+         nowIndex : (nowIndex + index +  dataArray.length) % dataArray.length
+       })
+    }
+    
+    render(){
+      const {dataArray,carouselPostMargin,carouselPostWidth,carouselPostHeight} = this.props
+      return(
+        <div className='carouselContainer flex center row'>
+          <div onClick={()=>this.changeImagePosition(-2)} className="controlLeft"><i className="fa fa-angle-left"  /></div>
+          <div className="carouselArea">
+            <div style={this.conputedLeft()} className="carouselPosts">
+              {dataArray.map((imgaeUrl,index)=>{
+                return(
+                 <div 
+                   key={imgaeUrl} 
+                    style={{
+                      width:carouselPostWidth, 
+                      height:carouselPostHeight,  
+                      margin:`0px ${carouselPostMargin}px `,...this.props.carouselPostStyle}} 
+                    className="carouselPostBox">
+                    {this.props.children(imgaeUrl,index)}
+                 </div>
+                )
+              })}
+            </div>
+          </div>
+          <div onClick={()=>this.changeImagePosition(2)} className="controlRight"><i className="fa fa-angle-right" /></div>
+        </div>
+      )
+    }
+  }
+  ReactDOM.render(<Container/>,document.getElementById("app"))
+</script>
+
 <!-- JS Includes -->
 <script src="wordChange.js"></script>
 <script src="pageLoader.js"></script>
+
+<!--Annimate On Scroll-->
+<script>AOS.init();</script>

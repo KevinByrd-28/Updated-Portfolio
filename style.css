@@ -85,7 +85,7 @@
     border-radius: .25em;
     background: limegreen;
     text-align: center;
-    animation-delay: 6s;
+    animation-delay: 4s;
     transition: padding 0.3s;
 }
 .speech-bubble:before, .speech-bubble:after {
@@ -156,6 +156,7 @@ body{
 }
 a{
     text-decoration: none;
+    color: #033047;
 }
 p, h1, h2, h3, h4, h5{
     margin-block-start: 0;
@@ -258,13 +259,122 @@ hr{
 	display: block;
 }
 .button1:hover {
-	background-color: #06c3d3;
-    border: 1px solid #06c3d3;
+	background-color: #06c2d388;
+    border: 1px solid #06c2d388;
 	-webkit-border-radius: 25px;
 	-moz-border-radius: 25px;
-	border-radius: 25px;	
+	border-radius: 20px;	
     -webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
 	-o-transition: all 0.5s;
 	transition: all 0.5s;
 }
+
+/* React Carousel */
+#app{
+    margin-top: 2em;
+    width: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.carouselContainer{
+    width: 1000px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.carouselArea{
+    width: 800px;
+    height: auto;
+    white-space: nowrap;
+    position: relative;
+    overflow:hidden;
+    box-sizing:border-box;
+}
+.carouselArea >.carouselPosts{
+    position: relative;
+    transition:0.5s;
+}
+.carouselPostBox{
+    width: 100%;
+    display:inline-block;
+    box-sizing:border-box;
+}
+.carouselPostBox >.cover{
+    width: 100%;
+    transition: 0.5s, 0s;
+    background-position:center,center;
+    background-size:cover;
+}
+.carouselPostBox > .cover:hover{
+    transform: scale(1.1);
+}
+.controlLeft , .controlRight {
+    width: 40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition: 0.5s, 0s;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 100;
+}
+.controlLeft:hover, .controlRight:hover {
+    color:#06c3d3;
+    -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.controlLeft{
+    left: 1rem;
+}
+.controlRight{
+    right: 1rem;
+}
+.contentBox{
+    width:90%;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #033047;
+}
+.contentBox:hover{
+    background-color: #06c2d388;
+    border-color: #06c2d388;
+    border-radius: 20px;
+    -webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+.cardBox{
+    display:flex;
+    width: 100%;
+}
+.cardBox .imageStyle{
+    width: 100px;
+    height: 100px;
+    transition: 0.5s, 0s;
+    background-position:center,center;
+    background-size:cover;
+}
+.imageStyle{
+    border: 1px solid #033047;
+    border-radius: 5px;
+}
+.cardBox .fontBox{
+    display:flex;
+    flex-direction: column;
+    width:calc(100% - 100px - 5px);
+}
+.cardBox .titleStyle{
+    font-size: 20px;
+    line-height:20px;
+    font-weight: bolder;
+    white-space: pre-line;
+    letter-spacing:1px;    
+}
+  
+  

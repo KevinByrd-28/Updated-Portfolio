@@ -95,6 +95,20 @@
     .row2 h2{
         font-size: 3rem;
     }
+    .intro{
+        display: none;
+    }
+    .row1 img{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .row2 .paragraph:first-of-type{
+        display: none;
+    }
+    .row4, .row5, .row6, .row7{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 405px){

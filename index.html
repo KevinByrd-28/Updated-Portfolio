@@ -26,6 +26,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+
 
     <meta property="og:image" content="asset/melty3.png">
     <meta property="og:image:type" content="image/png">
@@ -40,57 +42,45 @@
   </head>
 
 <body>
-  <!-- React Page Loader -->
-  <div id="root">
-    <div id="loader-wrapper">
-      <div class="loader"><img src="asset/melty.png"></div>
-    </div>
-  </div>
-
   <!-- Connect Melty -->
-  <div class="connect-floater">
+  <!--<div class="connect-floater">
     <div class='speech-bubble animate__animated animate__bounceIn'><p>Click me to connect on LinkedIn!</p>
     </div>
 
     <a href="https://www.linkedin.com/in/kevinbyrd123/" class="melty animate__animated animate__rotateInDownRight animate__delay-3s" target="_blank"><img src="asset/melty.png"></div>
     </a>
-  </div>
+  </div>-->
 
   <!-- Content -->
-    <div class="row1 flex center">
-      <div class="innerContainer ta-left">
-        <h1>Kevin Byrd.</h1>
-        <h2>I build <span id="changingword">what you need.</span></h2>
+    <div class="row1 flex center ">
+      <div class="light-overlay"></div>
+      <video playsinline autoplay muted loop poster="asset/background.jpg" id="bgvid">
+        <source src="asset/background.mp4" type="video/webm">
+        <source src="asset/background.webm" type="video/mp4">
+      </video>
+      <img src="asset/kbLOGO.png">
+      <div class="intro">
+        <h2 class="ta-center">choose a</h2>
+        <h2 class="ta-center">different path.</h2>
       </div>
     </div>
     <div class="row2 flex row">
-      <div class="paragraph h-50 flex center">
-        <h2 class="ta-center">A creative .NET developer.</h2>
+      <div class="paragraph h-50 flex center flex-column">
+        <img src="asset/kbLOGO.png">
       </div>
       <div class="paragraph h-50 flex center column">
-        <div class="image-row flex center justify-spread row">
-          <img src="asset/pngwing3.png">
-          <img src="asset/pngegg.png">
-          <img src="asset/pngwing1.png">
-        </div>
-        <div class="image-row flex center justify-spreadrow">
-          <img src="asset/React_logo_wordmark.png">
-          <img src="asset/pngkey.com-paintbrush-clipart-png-957460.png">
-        </div>
-        <div class="image-row flex center justify-spread row">
-          <img src="asset/kindpng_4640184.png">
-          <img src="asset/pngwing2.png">
-          <img src="asset/pngwing.png">
-        </div>
+        <h2 class="ta-center">freelancing.</h2>
+        <h2 class="ta-center lobster">branding.</h2>
+        <h2 class="ta-center">ui | ux.</h2>
       </div>
     </div>
     <div class="row3 flex column">
       <hr/>
     </div>
     <div class="row4 flex row center">
-      <div data-aos="fade-right" data-aos-delay="300" class="paragraph h-50 center column ta-left">
-        <h4>About Me</h4>
-        <h5>Hello! My name's Kevin B. and thanks for visiting my portfolio!</h5>
+      <div data-aos="fade-right" data-aos-delay="300" class="paragraph h-50 center column ta-center">
+        <h2 class="lobster">about me.</h2>
+        <h5 class="mt-2em">Hello! My name's Kevin and thanks for visiting my portfolio!</h5>
         <h5>I've operated missions on behalf of my government in nearly every continent on the Earth while I served as an <b>Anti-Terrorism Officer</b> in the US Air Force Reserves and a <b>Private Military Contractor (PMC)</b>. I even spent some time as a <b>Sheriff's Deputy</b>, patroling one of the highest violent crime jurisdictions in the state of South Carolina.  Then fast forward to December 2019 and the COVID Pandemic of 2020 - when I decided to change my life forever and enrolled in Eleven Fifty Academy's Software Development Bootcamp!</h5>
         <h5>Since then, I have had the privilege of working for a couple of different firms in a <b>Full Stack</b> role and have been freelancing single page applications and websites for <b>local small businesses in my community</b>.  I am currently with FLEXcon Company, Inc. as their sole Web Developer, working on rebuilding their online platform, customer portal and ecommerce system.  </h5>
         <h5>When I'm not focused on work, I enjoy going out on <b>adventures with my wife and two kids!</b> When no family adventures are in sight, I enjoy taking part in amatuer motorsports events and building project cars.  I am currently in the middle of building an adventure rig out of a 1995 Range Rover Classic!</h5>
@@ -100,7 +90,7 @@
           <a href="https://www.linkedin.com/in/kevinbyrd123/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
         </div>
       </div>
-      <div data-aos="fade-left" data-aos-delay="500" class="paragraph h-50 resume center column ta-right">
+      <!--<div data-aos="fade-left" data-aos-delay="500" class="paragraph h-50 resume center column ta-right">
         <h3><b>November 2022 - Present</b></h3>
         <h5>Web and Application Developer - FLEXcon Company, Inc</h5>
         <h3>January 2022 - November 2022</h3>
@@ -115,14 +105,14 @@
         <h5>Owner | Lead Instructor - Pandion Tactical LLC</h5>
         <h3>August 2008 - April 2012</h3>
         <h5>Security Specialist | Team Leader - Fluor Government Group International, INC</h5>
-      </div>
+      </div>-->
     </div>
     <div class="row5 flex column">
       <hr/>
     </div>
     <div class="row6 flex center row">
       <div class="paragraph center column ta-center">
-        <h2>Past project samples.</h2>
+        <h2 class="lobster">project samples.</h2>
         <div id="app"></div>
       </div>
     </div>
@@ -131,11 +121,11 @@
     </div>
     <div class="row8 flex center column">
       <div data-aos="fade-up" data-aos-delay="300" class="paragraph center column ta-center">
-        <h2>Get in touch.</h2>
-        <h4>I'm not currently looking for any new opportunities, but my inbox is always open. Whether you have a question or just want to chat, I'll do my best to get back to you!</h4>
+        <h2 class="lobster">say hello.</h2>
+        <h5 class="mt-2em">My inbox is always open. Whether you have a question or just want to chat, I'll do my best to get back to you!</h5>
         <a href="mailto: kevin.byrd@hotmail.com">
           <div class="button sim-button button1">
-            <h5>Hey There!</h5>
+            <p class="lobster">Hey There!</p>
           </div> 
         </a>
       </div>

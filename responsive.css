@@ -98,6 +98,16 @@
     .intro{
         display: none;
     }
+    .row1 video, .row1 .light-overlay{
+        display: none;
+    }
+    .row1{
+        background-image: url(asset/Winnebago_Topo_Pattern_Path_Gray.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+        background-attachment: fixed;
+    }
     .row1 img{
         top: 50%;
         left: 50%;

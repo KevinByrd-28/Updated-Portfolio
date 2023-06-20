@@ -280,7 +280,7 @@ video {
 	width: 10em;
 	cursor: pointer;
 }
-.sim-button:hover, .sim-button:active, .sim-button:focus{
+.sim-button:hover p, .sim-button:active p, .sim-button:focus p{
     color: white !important;
 }
 .button1 {

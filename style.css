@@ -167,6 +167,9 @@
   ::-webkit-scrollbar-thumb {
     background: #06c3d3;
   }
+html {
+	scroll-behavior: smooth;
+}
 body{
     margin:0;
     font-family: 'DM Sans', sans-serif;

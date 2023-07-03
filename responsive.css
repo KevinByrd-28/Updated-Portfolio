@@ -77,11 +77,7 @@
     }
   
 }
-@media only screen and (min-width: 526px){
-    .mobile{
-        display: none;
-    }
-}
+
 @media only screen and (max-width: 525px){
     .innerContainer h1{
         font-size: 3rem;
@@ -128,6 +124,9 @@
     .seo-title h2{
         font-size: 24px;
         text-align: right;
+    }
+    .mobile{
+        display: block;
     }
     .mobile-intro{
         padding: 20px;

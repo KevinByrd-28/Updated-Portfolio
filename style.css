@@ -50,6 +50,9 @@
     margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
+.mobile{
+    display: none;
+}
 
 /* Page Loader */
 #loader-wrapper {

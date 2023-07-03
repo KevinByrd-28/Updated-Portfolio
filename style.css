@@ -31,8 +31,24 @@
 .h-50{
     min-height: 50vh;
 }
+.mt-1em{
+    margin-top: 1em;
+}
 .mt-2em{
     margin-top: 2em;
+}
+.w-100{
+    width: 100vw;
+}
+.w-50{
+    width:50%;
+}
+.m-5{
+    margin: 5em;
+}
+.my-0{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 /* Page Loader */
@@ -88,7 +104,7 @@
     border-radius: .25em;
     background: limegreen;
     text-align: center;
-    animation-delay: 4s;
+    animation-delay: 2.5s;
     transition: padding 0.3s;
 }
 .speech-bubble:before, .speech-bubble:after {
@@ -188,6 +204,7 @@ hr{
 .lobster{
     font-family: Lobster, open-sans;
     color: #06c3d3;
+    font-weight: 300;
 }
 .fab{
     margin-right: .75em;
@@ -197,7 +214,7 @@ hr{
     transform: scale(1.3);
     transition: 500ms;
 }
-.row1 {
+.row1, .portfolio{
   height: 100vh;
   background-color: white;
   overflow-x: hidden;
@@ -228,6 +245,14 @@ hr{
     z-index:100;
     font-size: 80px !important;
 }
+.portfolio .intro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:100;
+    font-size: 80px !important;
+}
 video {
     object-fit: cover;
     width: 100%;
@@ -247,6 +272,13 @@ video {
 .innerContainer h2{
     font-size: 2rem;
 }
+.seo-title{
+    position: absolute;
+    top: 7%;
+    right: 10px;
+    z-index:100;
+    font-size: 35px !important;
+}
 .row2, .row3, .row4, .row5, .row6, .row7, .row8 {
     background-image: url(asset/Winnebago_Topo_Pattern_Path_Gray.svg);
     background-repeat: no-repeat;
@@ -254,12 +286,22 @@ video {
     overflow-x: hidden;
     background-attachment: fixed;
 }
+
+.row5-overlay{
+    background-color: rgba(239, 239, 239, 0.906)
+}
+.row5 img{
+    width: 80%
+}
 .center-compress{
     max-width: 950px;
 }
 .paragraph{
     width: 50%;
-    margin: 5em;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 .paragraph h2{
     font-size: 5rem;

@@ -3,6 +3,10 @@
     display: flex;
     flex-wrap: nowrap;
 }
+.no-wrap{
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
 .center{
     justify-content: center;
     align-content: center;
@@ -333,12 +337,29 @@ video {
     margin-bottom: 1em;
     overflow: hidden;
     margin-bottom: 3rem;
+    position: relative;
 }
 .gallery-block img{
     max-height: 100%;
     max-width: auto;
     object-fit: cover;
 }
+.gallery-overlay{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 40%;
+    background-color: #06c2d3c7;
+    z-index: 10;
+    opacity: 0;
+    transition: 500ms;
+    padding: 1em;
+    text-align: center;
+}
+.gallery-block:hover .gallery-overlay{
+    opacity: 1;
+}
+
 .row2, .row3, .row4, .row5, .row6, .row7, .row8 {
     background-image: url(asset/Winnebago_Topo_Pattern_Path_Gray.svg);
 

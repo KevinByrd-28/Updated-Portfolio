@@ -145,7 +145,7 @@
     }
     .color-shape2{
         position: absolute;
-        top: 200vh;
+        top: 199.99vh;
         width: 0;
         height: 0;
         z-index: -1;

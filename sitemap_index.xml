@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sitemapindex xmlns="https://www.google.com/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://kevinbyrd.me/http_sitemap.xml</loc>
+    <lastmod>2023-07-20T17:17:06+00:00</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kevinbyrd.me/https_sitemap.xml</loc>
+    <lastmod>2023-07-20T17:17:06+00:00</lastmod>
+  </sitemap>
+</sitemapindex>

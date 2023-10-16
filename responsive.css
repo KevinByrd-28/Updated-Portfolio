@@ -140,12 +140,7 @@
         justify-content: center;
     }
     .color-shape{
-        height: 100vh;
-        width: 100vw;
-        border: none;
-        background-color: rgba(224, 222, 222, 0.95);
-        
-        
+        display: none;  
     }
     .paragraph h2{
         font-size: 1.5rem;

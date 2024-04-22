@@ -76,6 +76,9 @@
     .carouselArea{
         white-space: normal;
     }
+    .controlLeft, .controlRight{
+        display: none;
+    }
     .paragraph{
         margin: 0 !important;
         padding: 20px;

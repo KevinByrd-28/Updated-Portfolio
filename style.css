@@ -552,7 +552,6 @@ video {
 .cardBox .fontBox{
     display:flex;
     flex-direction: column;
-    width:calc(100% - 100px - 5px);
 }
 .cardBox .titleStyle{
     font-size: 20px;

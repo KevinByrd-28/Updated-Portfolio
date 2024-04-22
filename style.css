@@ -537,6 +537,7 @@ video {
 .cardBox{
     display:flex;
     width: 100%;
+    justify-content: space-evenly;
 }
 .cardBox .imageStyle{
     width: 100px;

@@ -351,10 +351,6 @@ video {
     object-fit: cover;
     transition: 500ms;
 }
-.gallery-block a{
-    display: flex;
-    justify-content: center;
-}
 .gallery-overlay{
     position: absolute;
     bottom: 0;
@@ -501,6 +497,10 @@ video {
 }
 .carouselPostBox > .cover:hover{
     transform: scale(1.1);
+}
+.carouselPostBox a{
+    display: flex;
+    justify-content: center;
 }
 .controlLeft , .controlRight {
     width: 40px;

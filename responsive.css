@@ -90,10 +90,6 @@
     .gallery-block{
         margin: 1em;
     }
-    .gallery-block a{
-        display: flex;
-        justify-content: center;
-    }
 }
 @media only screen and (max-width: 850px){
     .paragraph h4{

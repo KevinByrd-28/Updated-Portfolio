@@ -351,6 +351,10 @@ video {
     object-fit: cover;
     transition: 500ms;
 }
+.gallery-block a{
+    display: flex;
+    justify-content: center;
+}
 .gallery-overlay{
     position: absolute;
     bottom: 0;

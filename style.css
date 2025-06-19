@@ -18,6 +18,10 @@
 .column{
     flex-direction: column;
 }
+.column-left{
+    flex-direction: column;
+    flex: 50%;
+}
 .row{
     flex-direction: row;
 }
@@ -388,6 +392,7 @@ video {
 }
 .row5{
     position: relative;
+    overflow-y: auto;
 }
 .row5 .paragraph{
     z-index: 10;
